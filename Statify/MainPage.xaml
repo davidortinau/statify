@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Statify" 
+    x:Class="Statify.MainPage">
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="MyColorStates">
+            <VisualState x:Name="Red">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="#340002" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState x:Name="Blue">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="#4a707a" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+    <StackLayout>
+        <Label Text="Red" 
+               TextColor="#920e0c"
+               FontSize="42"
+               x:Name="MyLabel"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="MyColorStates">
+                    <VisualState x:Name="Red">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="#920e0c" />
+                            <Setter Property="Text" Value="Red" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Blue">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="#94b0b7" />
+                            <Setter Property="Text" Value="Blue" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Label>
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Handle_Tapped" />
+        </StackLayout.GestureRecognizers>
+    </StackLayout>
+</ContentPage>
